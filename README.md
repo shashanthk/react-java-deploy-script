@@ -74,3 +74,9 @@ sudo ln -s /home/ubuntu/deploy.sh /usr/local/bin/deploy
 ```
 
 > Note: This creates a symbolic link (shortcut) to the actual script instead of copying it. Future changes to the source script are picked up automatically.
+
+#### 9) Run anywhere
+
+```bash
+deploy
+```
