@@ -158,7 +158,8 @@ deploy_react_project() {
     log_info "Extracting ${source_zip}..."
     rm -rf "$temp_extract_path"
     unzip -q "$source_zip" -d "$TMP_SRC"
-    if [[ $? -ne 0 || ! -d "$temp_extract_path" ]]; then
+    exit_code=$?
+    if [[ $exit_code -gt 1 || ! -d "$temp_extract_path" ]]; then
         log_error "Failed to extract or extracted directory '${REACT_BUILD_DIR_NAME}' not found in zip."
         return 1
     fi
