@@ -185,7 +185,6 @@ deploy_react_project() {
     log_success "${project_name} deployed successfully! ✨"
     return 0
 }
-# ====================== MODIFIED SECTION END ======================
 
 ##
 # Deploys a .war file to Tomcat
